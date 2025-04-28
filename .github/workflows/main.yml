@@ -1,15 +1,53 @@
-[![Mr Coxall's Super Linter](https://github.com/<OWNER>/<REPOSITORY>/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/<OWNER>/<REPOSITORY>/actions/)
+##################################################
 
-Make sure to replace <OWNER> with your Github Organization name, and <REPOSITORY> with the name of your project!
+# Run Mr Coxall's Super Linter against code base #
 
-For example:
+##################################################
 
-if my GitHub repo is: 
+---
 
-https://github.com/ICS3U-C-Programming-SophieS/Unit1-02-Python
+name: Mr Coxall's Super Linter
 
-then I will copy what is in red from the URL and paste over <OWNER>/<REPOSITORY> as follows:
+on: [push, pull_request]
 
-[![Ms Raffin's Super Linter](https://github.com/ICS3U-C-Programming-SophieS/Unit1-02-Python/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/ICS3U-C-Programming-SophieS/Unit1-02-Python/actions/)
+jobs:
 
-Then click "Commit"
+  run-linters:
+
+    name: Mr Coxall's Super Linter
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Check out Git repository 🚦
+
+        uses: actions/checkout@main
+
+      - name: Run GitHub Super Linter 🚀
+
+        uses: mr-coxall/super-linter@master
+
+        env:
+
+          VALIDATE_ALL_CODEBASE: true
+
+          LINTER_RULES_PATH: /
+
+          VALIDATE_CLANG_FORMAT: false
+
+          VALIDATE_JAVASCRIPT_STANDARD: false
+
+          VALIDATE_GOOGLE_JAVA_FORMAT: false
+
+          VALIDATE_PYTHON_FLAKE8: false
+
+          VALIDATE_GITLEAKS: false # for secrets detection
+
+          VALIDATE_JSON: false
+
+          VALIDATE_JSCPD: false # for copy and paste detection
+
+          DEFAULT_BRANCH: main
+
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
