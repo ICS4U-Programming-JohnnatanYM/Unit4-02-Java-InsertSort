@@ -1,0 +1,15 @@
+[![Mr Coxall's Super Linter](https://github.com/<OWNER>/<REPOSITORY>/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/<OWNER>/<REPOSITORY>/actions/)
+
+Make sure to replace <OWNER> with your Github Organization name, and <REPOSITORY> with the name of your project!
+
+For example:
+
+if my GitHub repo is: 
+
+https://github.com/ICS3U-C-Programming-SophieS/Unit1-02-Python
+
+then I will copy what is in red from the URL and paste over <OWNER>/<REPOSITORY> as follows:
+
+[![Ms Raffin's Super Linter](https://github.com/ICS3U-C-Programming-SophieS/Unit1-02-Python/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/ICS3U-C-Programming-SophieS/Unit1-02-Python/actions/)
+
+Then click "Commit"
